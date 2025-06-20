@@ -58,7 +58,8 @@ const Navbar = () => {
         </div>
         <div>
           {/* Right */}
-          <div className="flex space-x-3">
+          <div className="flex items-center space-x-3">
+            <Link to='/admin' className="text-white bg-black px-2 py-1 rounded block text-sm ">Admin</Link>
             <Link to="/profile" className="hover:text-black">
               <HiOutlineUser className="h-6 w-6 text-gray-700" />
             </Link>

@@ -7,6 +7,11 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import CollectionPage from "./pages/CollectionPage";
 import ProductsDetails from "./components/Products/ProductsDetails";
+import Checkout from "./components/Cart/Checkout";
+import OrderConfirmation from "./pages/OrderConfirmation";
+import OrderDetailsPage from "./pages/OrderDetailsPage";
+import MyOrderPage from "./pages/MyOrderPage";
+import AdminLayout from "./components/Admin/AdminLayout";
 const App = () => {
   return (
     <BrowserRouter>
@@ -20,8 +25,14 @@ const App = () => {
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/collection/:collection' element={<CollectionPage/>}/>
           <Route path='/product/:id' element={<ProductsDetails/>}/>
+          <Route path='/checkout' element={<Checkout/>}/>
+          <Route path='/order-confirmation' element={<OrderConfirmation/>}/>
+          <Route path='/order/:id' element={<OrderDetailsPage/>}/>
+          <Route path='/my-orders' element={<MyOrderPage/>}/>
         </Route>
-        <Route>{/* Admin Layout */}</Route>
+        <Route path="/admin" element={<AdminLayout/>}>
+          {/* Admin Layout */}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
